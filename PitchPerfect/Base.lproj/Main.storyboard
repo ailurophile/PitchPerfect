@@ -18,35 +18,37 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yfA-aa-Tb2">
-                                <rect key="frame" x="250" y="250" width="100" height="100"/>
-                                <state key="normal" image="record"/>
-                                <connections>
-                                    <action selector="recordAudio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="o9t-mD-lUU"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to record" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pbt-7P-IFT">
-                                <rect key="frame" x="248" y="358" width="103" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NlT-4a-37r">
-                                <rect key="frame" x="274" y="381" width="50" height="50"/>
-                                <state key="normal" image="stopRecording"/>
-                                <connections>
-                                    <action selector="stopRecording:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ymE-La-Ovh"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="TtJ-gQ-n6m">
+                                <rect key="frame" x="249" y="150" width="103" height="300"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yfA-aa-Tb2">
+                                        <rect key="frame" x="0.0" y="0.0" width="103" height="100"/>
+                                        <state key="normal" image="record"/>
+                                        <connections>
+                                            <action selector="recordAudio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="o9t-mD-lUU"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to record" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pbt-7P-IFT">
+                                        <rect key="frame" x="0.0" y="100" width="103" height="100"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NlT-4a-37r">
+                                        <rect key="frame" x="0.0" y="200" width="103" height="100"/>
+                                        <state key="normal" image="stopRecording"/>
+                                        <connections>
+                                            <action selector="stopRecording:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ymE-La-Ovh"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Pbt-7P-IFT" firstAttribute="centerX" secondItem="yfA-aa-Tb2" secondAttribute="centerX" id="039-xe-uGy"/>
-                            <constraint firstItem="NlT-4a-37r" firstAttribute="top" secondItem="Pbt-7P-IFT" secondAttribute="bottom" constant="2" id="5FX-d6-uOs"/>
-                            <constraint firstItem="yfA-aa-Tb2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DDj-Y4-FI7"/>
-                            <constraint firstItem="Pbt-7P-IFT" firstAttribute="top" secondItem="yfA-aa-Tb2" secondAttribute="bottom" constant="8" id="c0B-KX-p2W"/>
-                            <constraint firstItem="NlT-4a-37r" firstAttribute="centerX" secondItem="Pbt-7P-IFT" secondAttribute="centerX" id="fV6-4l-lzn"/>
-                            <constraint firstItem="yfA-aa-Tb2" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="kP7-Go-dRx"/>
+                            <constraint firstItem="TtJ-gQ-n6m" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9YE-3D-w2B"/>
+                            <constraint firstItem="TtJ-gQ-n6m" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="OYI-Gn-eH9"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Pta-pk-YZn"/>
@@ -59,7 +61,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1031" y="445"/>
+            <point key="canvasLocation" x="1035" y="445"/>
         </scene>
         <!--Play Sounds View Controller-->
         <scene sceneID="PYz-FB-dj0">
