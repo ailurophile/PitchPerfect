@@ -99,7 +99,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="280" height="134"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YUa-e2-4gK" userLabel="SnailButton">
-                                                        <rect key="frame" x="70" y="17" width="140" height="100"/>
+                                                        <rect key="frame" x="91" y="17" width="98" height="100"/>
                                                         <state key="normal" image="slow"/>
                                                         <connections>
                                                             <action selector="playSoundForButton:" destination="X2D-Vh-wij" eventType="touchUpInside" id="Mwa-Ik-aJH"/>
@@ -108,7 +108,7 @@
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
-                                                    <constraint firstItem="YUa-e2-4gK" firstAttribute="width" secondItem="n7t-Mj-JXh" secondAttribute="width" multiplier="0.5" id="7VD-74-AHe"/>
+                                                    <constraint firstItem="YUa-e2-4gK" firstAttribute="width" secondItem="n7t-Mj-JXh" secondAttribute="width" multiplier="0.35" id="7VD-74-AHe"/>
                                                     <constraint firstItem="YUa-e2-4gK" firstAttribute="centerX" secondItem="n7t-Mj-JXh" secondAttribute="centerX" id="8In-cz-Ti8"/>
                                                     <constraint firstItem="YUa-e2-4gK" firstAttribute="centerY" secondItem="n7t-Mj-JXh" secondAttribute="centerY" id="JAK-mk-zv7"/>
                                                 </constraints>
@@ -127,7 +127,7 @@
                                                 <rect key="frame" x="280" y="0.0" width="280" height="134"/>
                                                 <subviews>
                                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cma-oa-uzF" userLabel="RabbitButton">
-                                                        <rect key="frame" x="70" y="17" width="140" height="100"/>
+                                                        <rect key="frame" x="91" y="17" width="98" height="100"/>
                                                         <state key="normal" image="fast"/>
                                                         <connections>
                                                             <action selector="playSoundForButton:" destination="X2D-Vh-wij" eventType="touchUpInside" id="abL-HK-WAg"/>
@@ -140,6 +140,11 @@
                                                     <constraint firstItem="cma-oa-uzF" firstAttribute="width" secondItem="MfD-nU-Ud6" secondAttribute="width" multiplier="0.5" id="clc-Rd-Nyg"/>
                                                     <constraint firstItem="cma-oa-uzF" firstAttribute="centerX" secondItem="MfD-nU-Ud6" secondAttribute="centerX" id="qoh-Pb-Ibf"/>
                                                 </constraints>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="clc-Rd-Nyg"/>
+                                                    </mask>
+                                                </variation>
                                                 <variation key="heightClass=compact">
                                                     <mask key="constraints">
                                                         <exclude reference="clc-Rd-Nyg"/>
@@ -153,6 +158,9 @@
                                             </view>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="cma-oa-uzF" firstAttribute="width" secondItem="YUa-e2-4gK" secondAttribute="width" id="glN-C0-iuE"/>
+                                        </constraints>
                                         <variation key="heightClass=compact-widthClass=compact" axis="vertical"/>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="hC9-TI-fYB">
@@ -162,7 +170,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="280" height="134"/>
                                                 <subviews>
                                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GYV-fP-DVB" userLabel="ChipmunkButton">
-                                                        <rect key="frame" x="70" y="17" width="140" height="100"/>
+                                                        <rect key="frame" x="91" y="17" width="98" height="100"/>
                                                         <state key="normal" image="Chipmunk"/>
                                                         <connections>
                                                             <action selector="playSoundForButton:" destination="X2D-Vh-wij" eventType="touchUpInside" id="ciI-rN-ZPM"/>
@@ -175,6 +183,11 @@
                                                     <constraint firstItem="GYV-fP-DVB" firstAttribute="centerX" secondItem="DB8-2w-ajh" secondAttribute="centerX" id="gPg-bd-J1q"/>
                                                     <constraint firstItem="GYV-fP-DVB" firstAttribute="centerY" secondItem="DB8-2w-ajh" secondAttribute="centerY" id="s3G-kL-DN6"/>
                                                 </constraints>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="B81-GO-Nhm"/>
+                                                    </mask>
+                                                </variation>
                                                 <variation key="heightClass=compact">
                                                     <mask key="constraints">
                                                         <exclude reference="B81-GO-Nhm"/>
@@ -190,7 +203,7 @@
                                                 <rect key="frame" x="280" y="0.0" width="280" height="134"/>
                                                 <subviews>
                                                     <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="20Y-QT-dwO" userLabel="DarthVaderButtonButton">
-                                                        <rect key="frame" x="70" y="17" width="140" height="100"/>
+                                                        <rect key="frame" x="91" y="17" width="98" height="100"/>
                                                         <state key="normal" image="DarthVader"/>
                                                         <connections>
                                                             <action selector="playSoundForButton:" destination="X2D-Vh-wij" eventType="touchUpInside" id="E5J-RZ-gea"/>
@@ -203,6 +216,11 @@
                                                     <constraint firstItem="20Y-QT-dwO" firstAttribute="width" secondItem="rxs-Ac-MMA" secondAttribute="width" multiplier="0.5" id="7Lq-EW-fJf"/>
                                                     <constraint firstItem="20Y-QT-dwO" firstAttribute="centerX" secondItem="rxs-Ac-MMA" secondAttribute="centerX" id="Y30-XE-5RX"/>
                                                 </constraints>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="7Lq-EW-fJf"/>
+                                                    </mask>
+                                                </variation>
                                                 <variation key="heightClass=compact">
                                                     <mask key="constraints">
                                                         <exclude reference="7Lq-EW-fJf"/>
@@ -225,7 +243,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="280" height="134"/>
                                                 <subviews>
                                                     <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZcQ-Ga-9rz" userLabel="EchoButton">
-                                                        <rect key="frame" x="70" y="17" width="140" height="100"/>
+                                                        <rect key="frame" x="91" y="17" width="98" height="100"/>
                                                         <state key="normal" image="echo"/>
                                                         <connections>
                                                             <action selector="playSoundForButton:" destination="X2D-Vh-wij" eventType="touchUpInside" id="QMz-Gt-pk7"/>
@@ -238,6 +256,11 @@
                                                     <constraint firstItem="ZcQ-Ga-9rz" firstAttribute="centerY" secondItem="xwp-fD-BLH" secondAttribute="centerY" id="U1d-iM-RWj"/>
                                                     <constraint firstItem="ZcQ-Ga-9rz" firstAttribute="centerX" secondItem="xwp-fD-BLH" secondAttribute="centerX" id="iKi-oU-9HG"/>
                                                 </constraints>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="8jQ-v3-aiS"/>
+                                                    </mask>
+                                                </variation>
                                                 <variation key="heightClass=compact">
                                                     <mask key="constraints">
                                                         <exclude reference="8jQ-v3-aiS"/>
@@ -253,7 +276,7 @@
                                                 <rect key="frame" x="280" y="0.0" width="280" height="134"/>
                                                 <subviews>
                                                     <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yGv-sl-r0j" userLabel="ReverbButton">
-                                                        <rect key="frame" x="70" y="17" width="140" height="100"/>
+                                                        <rect key="frame" x="91" y="17" width="98" height="100"/>
                                                         <state key="normal" image="reverb"/>
                                                         <connections>
                                                             <action selector="playSoundForButton:" destination="X2D-Vh-wij" eventType="touchUpInside" id="ZrZ-xJ-3Hv"/>
@@ -266,6 +289,11 @@
                                                     <constraint firstItem="yGv-sl-r0j" firstAttribute="centerY" secondItem="Ud2-Qb-x1u" secondAttribute="centerY" id="SiR-ii-EFw"/>
                                                     <constraint firstItem="yGv-sl-r0j" firstAttribute="width" secondItem="Ud2-Qb-x1u" secondAttribute="width" multiplier="0.5" id="TAw-cH-Uk6"/>
                                                 </constraints>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="TAw-cH-Uk6"/>
+                                                    </mask>
+                                                </variation>
                                                 <variation key="heightClass=compact">
                                                     <mask key="constraints">
                                                         <exclude reference="TAw-cH-Uk6"/>
@@ -317,10 +345,16 @@
                                     </stackView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="ZcQ-Ga-9rz" firstAttribute="width" secondItem="YUa-e2-4gK" secondAttribute="width" id="G9Y-N4-sny"/>
+                                    <constraint firstItem="yGv-sl-r0j" firstAttribute="width" secondItem="YUa-e2-4gK" secondAttribute="width" id="L5G-iO-NNA"/>
+                                    <constraint firstItem="20Y-QT-dwO" firstAttribute="width" secondItem="YUa-e2-4gK" secondAttribute="width" id="nnO-1z-8dW"/>
+                                    <constraint firstItem="GYV-fP-DVB" firstAttribute="width" secondItem="YUa-e2-4gK" secondAttribute="width" id="pc2-Pm-C0U"/>
+                                </constraints>
                                 <variation key="heightClass=compact-widthClass=compact" axis="horizontal"/>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="1J6-It-XKp" firstAttribute="top" secondItem="Bzw-IW-G0K" secondAttribute="bottom" id="QTf-Z0-Eiw"/>
                             <constraint firstItem="Bzw-IW-G0K" firstAttribute="top" secondItem="To5-v0-Imk" secondAttribute="bottom" id="VK9-GL-dD7"/>
