@@ -18,24 +18,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="TtJ-gQ-n6m">
-                                <rect key="frame" x="249" y="150" width="103" height="300"/>
+                            <stackView opaque="NO" contentMode="scaleAspectFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="TtJ-gQ-n6m">
+                                <rect key="frame" x="233" y="74" width="134" height="516"/>
                                 <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap mic to record" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pbt-7P-IFT">
+                                        <rect key="frame" x="0.0" y="0.0" width="134" height="172"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yfA-aa-Tb2">
-                                        <rect key="frame" x="0.0" y="0.0" width="103" height="100"/>
+                                        <rect key="frame" x="0.0" y="172" width="134" height="172"/>
                                         <state key="normal" image="record"/>
                                         <connections>
                                             <action selector="recordAudio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="o9t-mD-lUU"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to record" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pbt-7P-IFT">
-                                        <rect key="frame" x="0.0" y="100" width="103" height="100"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NlT-4a-37r">
-                                        <rect key="frame" x="0.0" y="200" width="103" height="100"/>
+                                        <rect key="frame" x="0.0" y="344" width="134" height="172"/>
                                         <state key="normal" image="stopRecording"/>
                                         <connections>
                                             <action selector="stopRecording:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ymE-La-Ovh"/>
@@ -47,9 +47,22 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="TtJ-gQ-n6m" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2n3-oZ-eSA"/>
                             <constraint firstItem="TtJ-gQ-n6m" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9YE-3D-w2B"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="TtJ-gQ-n6m" secondAttribute="bottom" constant="10" id="DcK-J0-vII"/>
                             <constraint firstItem="TtJ-gQ-n6m" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="OYI-Gn-eH9"/>
+                            <constraint firstItem="TtJ-gQ-n6m" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="PAR-9z-g91"/>
+                            <constraint firstItem="TtJ-gQ-n6m" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="epd-n0-qRR"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="TtJ-gQ-n6m" secondAttribute="bottom" constant="10" id="t1P-Tk-OS1"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="9YE-3D-w2B"/>
+                                <exclude reference="OYI-Gn-eH9"/>
+                                <exclude reference="epd-n0-qRR"/>
+                                <exclude reference="DcK-J0-vII"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="Pta-pk-YZn"/>
                     <connections>
@@ -75,7 +88,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Bzw-IW-G0K">
+                            <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Bzw-IW-G0K">
                                 <rect key="frame" x="20" y="64" width="560" height="536"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="4SY-7H-Fz4">
@@ -96,6 +109,8 @@
                                                 </connections>
                                             </button>
                                         </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <variation key="heightClass=compact-widthClass=compact" axis="vertical"/>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="hC9-TI-fYB">
                                         <rect key="frame" x="0.0" y="134" width="560" height="134"/>
@@ -115,6 +130,8 @@
                                                 </connections>
                                             </button>
                                         </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <variation key="heightClass=compact-widthClass=compact" axis="vertical"/>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="DqG-OK-eGb">
                                         <rect key="frame" x="0.0" y="268" width="560" height="134"/>
@@ -134,6 +151,8 @@
                                                 </connections>
                                             </button>
                                         </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <variation key="heightClass=compact-widthClass=compact" axis="vertical"/>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="mRr-g0-d2w">
                                         <rect key="frame" x="0.0" y="402" width="560" height="134"/>
@@ -146,9 +165,11 @@
                                                 </connections>
                                             </button>
                                         </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </stackView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <variation key="heightClass=compact-widthClass=compact" axis="horizontal"/>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
