@@ -4,6 +4,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--Record Sounds View Controller-->
@@ -94,20 +95,62 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="4SY-7H-Fz4">
                                         <rect key="frame" x="0.0" y="0.0" width="560" height="134"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YUa-e2-4gK" userLabel="SnailButton">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n7t-Mj-JXh">
                                                 <rect key="frame" x="0.0" y="0.0" width="280" height="134"/>
-                                                <state key="normal" image="slow"/>
-                                                <connections>
-                                                    <action selector="playSoundForButton:" destination="X2D-Vh-wij" eventType="touchUpInside" id="Mwa-Ik-aJH"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cma-oa-uzF" userLabel="RabbitButton">
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YUa-e2-4gK" userLabel="SnailButton">
+                                                        <rect key="frame" x="70" y="17" width="140" height="100"/>
+                                                        <state key="normal" image="slow"/>
+                                                        <connections>
+                                                            <action selector="playSoundForButton:" destination="X2D-Vh-wij" eventType="touchUpInside" id="Mwa-Ik-aJH"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstItem="YUa-e2-4gK" firstAttribute="width" secondItem="n7t-Mj-JXh" secondAttribute="width" multiplier="0.5" id="7VD-74-AHe"/>
+                                                    <constraint firstItem="YUa-e2-4gK" firstAttribute="centerX" secondItem="n7t-Mj-JXh" secondAttribute="centerX" id="8In-cz-Ti8"/>
+                                                    <constraint firstItem="YUa-e2-4gK" firstAttribute="centerY" secondItem="n7t-Mj-JXh" secondAttribute="centerY" id="JAK-mk-zv7"/>
+                                                </constraints>
+                                                <variation key="heightClass=compact">
+                                                    <mask key="constraints">
+                                                        <exclude reference="7VD-74-AHe"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="widthClass=compact">
+                                                    <mask key="constraints">
+                                                        <exclude reference="7VD-74-AHe"/>
+                                                    </mask>
+                                                </variation>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MfD-nU-Ud6">
                                                 <rect key="frame" x="280" y="0.0" width="280" height="134"/>
-                                                <state key="normal" image="fast"/>
-                                                <connections>
-                                                    <action selector="playSoundForButton:" destination="X2D-Vh-wij" eventType="touchUpInside" id="abL-HK-WAg"/>
-                                                </connections>
-                                            </button>
+                                                <subviews>
+                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cma-oa-uzF" userLabel="RabbitButton">
+                                                        <rect key="frame" x="70" y="17" width="140" height="100"/>
+                                                        <state key="normal" image="fast"/>
+                                                        <connections>
+                                                            <action selector="playSoundForButton:" destination="X2D-Vh-wij" eventType="touchUpInside" id="abL-HK-WAg"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstItem="cma-oa-uzF" firstAttribute="centerY" secondItem="MfD-nU-Ud6" secondAttribute="centerY" id="Bfc-0m-1PD"/>
+                                                    <constraint firstItem="cma-oa-uzF" firstAttribute="width" secondItem="MfD-nU-Ud6" secondAttribute="width" multiplier="0.5" id="clc-Rd-Nyg"/>
+                                                    <constraint firstItem="cma-oa-uzF" firstAttribute="centerX" secondItem="MfD-nU-Ud6" secondAttribute="centerX" id="qoh-Pb-Ibf"/>
+                                                </constraints>
+                                                <variation key="heightClass=compact">
+                                                    <mask key="constraints">
+                                                        <exclude reference="clc-Rd-Nyg"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="widthClass=compact">
+                                                    <mask key="constraints">
+                                                        <exclude reference="clc-Rd-Nyg"/>
+                                                    </mask>
+                                                </variation>
+                                            </view>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <variation key="heightClass=compact-widthClass=compact" axis="vertical"/>
@@ -115,20 +158,62 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="hC9-TI-fYB">
                                         <rect key="frame" x="0.0" y="134" width="560" height="134"/>
                                         <subviews>
-                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GYV-fP-DVB" userLabel="ChipmunkButton">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DB8-2w-ajh">
                                                 <rect key="frame" x="0.0" y="0.0" width="280" height="134"/>
-                                                <state key="normal" image="Chipmunk"/>
-                                                <connections>
-                                                    <action selector="playSoundForButton:" destination="X2D-Vh-wij" eventType="touchUpInside" id="ciI-rN-ZPM"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="20Y-QT-dwO" userLabel="DarthVaderButtonButton">
+                                                <subviews>
+                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GYV-fP-DVB" userLabel="ChipmunkButton">
+                                                        <rect key="frame" x="70" y="17" width="140" height="100"/>
+                                                        <state key="normal" image="Chipmunk"/>
+                                                        <connections>
+                                                            <action selector="playSoundForButton:" destination="X2D-Vh-wij" eventType="touchUpInside" id="ciI-rN-ZPM"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstItem="GYV-fP-DVB" firstAttribute="width" secondItem="DB8-2w-ajh" secondAttribute="width" multiplier="0.5" id="B81-GO-Nhm"/>
+                                                    <constraint firstItem="GYV-fP-DVB" firstAttribute="centerX" secondItem="DB8-2w-ajh" secondAttribute="centerX" id="gPg-bd-J1q"/>
+                                                    <constraint firstItem="GYV-fP-DVB" firstAttribute="centerY" secondItem="DB8-2w-ajh" secondAttribute="centerY" id="s3G-kL-DN6"/>
+                                                </constraints>
+                                                <variation key="heightClass=compact">
+                                                    <mask key="constraints">
+                                                        <exclude reference="B81-GO-Nhm"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="widthClass=compact">
+                                                    <mask key="constraints">
+                                                        <exclude reference="B81-GO-Nhm"/>
+                                                    </mask>
+                                                </variation>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rxs-Ac-MMA">
                                                 <rect key="frame" x="280" y="0.0" width="280" height="134"/>
-                                                <state key="normal" image="DarthVader"/>
-                                                <connections>
-                                                    <action selector="playSoundForButton:" destination="X2D-Vh-wij" eventType="touchUpInside" id="E5J-RZ-gea"/>
-                                                </connections>
-                                            </button>
+                                                <subviews>
+                                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="20Y-QT-dwO" userLabel="DarthVaderButtonButton">
+                                                        <rect key="frame" x="70" y="17" width="140" height="100"/>
+                                                        <state key="normal" image="DarthVader"/>
+                                                        <connections>
+                                                            <action selector="playSoundForButton:" destination="X2D-Vh-wij" eventType="touchUpInside" id="E5J-RZ-gea"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstItem="20Y-QT-dwO" firstAttribute="centerY" secondItem="rxs-Ac-MMA" secondAttribute="centerY" id="2M8-ti-hLr"/>
+                                                    <constraint firstItem="20Y-QT-dwO" firstAttribute="width" secondItem="rxs-Ac-MMA" secondAttribute="width" multiplier="0.5" id="7Lq-EW-fJf"/>
+                                                    <constraint firstItem="20Y-QT-dwO" firstAttribute="centerX" secondItem="rxs-Ac-MMA" secondAttribute="centerX" id="Y30-XE-5RX"/>
+                                                </constraints>
+                                                <variation key="heightClass=compact">
+                                                    <mask key="constraints">
+                                                        <exclude reference="7Lq-EW-fJf"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="widthClass=compact">
+                                                    <mask key="constraints">
+                                                        <exclude reference="7Lq-EW-fJf"/>
+                                                    </mask>
+                                                </variation>
+                                            </view>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <variation key="heightClass=compact-widthClass=compact" axis="vertical"/>
@@ -136,20 +221,62 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="DqG-OK-eGb">
                                         <rect key="frame" x="0.0" y="268" width="560" height="134"/>
                                         <subviews>
-                                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZcQ-Ga-9rz" userLabel="EchoButton">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xwp-fD-BLH">
                                                 <rect key="frame" x="0.0" y="0.0" width="280" height="134"/>
-                                                <state key="normal" image="echo"/>
-                                                <connections>
-                                                    <action selector="playSoundForButton:" destination="X2D-Vh-wij" eventType="touchUpInside" id="QMz-Gt-pk7"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yGv-sl-r0j" userLabel="ReverbButton">
+                                                <subviews>
+                                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZcQ-Ga-9rz" userLabel="EchoButton">
+                                                        <rect key="frame" x="70" y="17" width="140" height="100"/>
+                                                        <state key="normal" image="echo"/>
+                                                        <connections>
+                                                            <action selector="playSoundForButton:" destination="X2D-Vh-wij" eventType="touchUpInside" id="QMz-Gt-pk7"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstItem="ZcQ-Ga-9rz" firstAttribute="width" secondItem="xwp-fD-BLH" secondAttribute="width" multiplier="0.5" id="8jQ-v3-aiS"/>
+                                                    <constraint firstItem="ZcQ-Ga-9rz" firstAttribute="centerY" secondItem="xwp-fD-BLH" secondAttribute="centerY" id="U1d-iM-RWj"/>
+                                                    <constraint firstItem="ZcQ-Ga-9rz" firstAttribute="centerX" secondItem="xwp-fD-BLH" secondAttribute="centerX" id="iKi-oU-9HG"/>
+                                                </constraints>
+                                                <variation key="heightClass=compact">
+                                                    <mask key="constraints">
+                                                        <exclude reference="8jQ-v3-aiS"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="widthClass=compact">
+                                                    <mask key="constraints">
+                                                        <exclude reference="8jQ-v3-aiS"/>
+                                                    </mask>
+                                                </variation>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ud2-Qb-x1u">
                                                 <rect key="frame" x="280" y="0.0" width="280" height="134"/>
-                                                <state key="normal" image="reverb"/>
-                                                <connections>
-                                                    <action selector="playSoundForButton:" destination="X2D-Vh-wij" eventType="touchUpInside" id="ZrZ-xJ-3Hv"/>
-                                                </connections>
-                                            </button>
+                                                <subviews>
+                                                    <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yGv-sl-r0j" userLabel="ReverbButton">
+                                                        <rect key="frame" x="70" y="17" width="140" height="100"/>
+                                                        <state key="normal" image="reverb"/>
+                                                        <connections>
+                                                            <action selector="playSoundForButton:" destination="X2D-Vh-wij" eventType="touchUpInside" id="ZrZ-xJ-3Hv"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstItem="yGv-sl-r0j" firstAttribute="centerX" secondItem="Ud2-Qb-x1u" secondAttribute="centerX" id="J7m-O9-3lg"/>
+                                                    <constraint firstItem="yGv-sl-r0j" firstAttribute="centerY" secondItem="Ud2-Qb-x1u" secondAttribute="centerY" id="SiR-ii-EFw"/>
+                                                    <constraint firstItem="yGv-sl-r0j" firstAttribute="width" secondItem="Ud2-Qb-x1u" secondAttribute="width" multiplier="0.5" id="TAw-cH-Uk6"/>
+                                                </constraints>
+                                                <variation key="heightClass=compact">
+                                                    <mask key="constraints">
+                                                        <exclude reference="TAw-cH-Uk6"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="widthClass=compact">
+                                                    <mask key="constraints">
+                                                        <exclude reference="TAw-cH-Uk6"/>
+                                                    </mask>
+                                                </variation>
+                                            </view>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <variation key="heightClass=compact-widthClass=compact" axis="vertical"/>
@@ -157,13 +284,34 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="mRr-g0-d2w">
                                         <rect key="frame" x="0.0" y="402" width="560" height="134"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eOD-Mz-cbO" userLabel="StopButton">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U9D-9N-IDZ">
                                                 <rect key="frame" x="0.0" y="0.0" width="560" height="134"/>
-                                                <state key="normal" image="stopRecording"/>
-                                                <connections>
-                                                    <action selector="stopButtonPressed:" destination="X2D-Vh-wij" eventType="touchUpInside" id="yLK-2h-ckv"/>
-                                                </connections>
-                                            </button>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eOD-Mz-cbO" userLabel="StopButton">
+                                                        <rect key="frame" x="224" y="42" width="112" height="50"/>
+                                                        <state key="normal" image="stopRecording"/>
+                                                        <connections>
+                                                            <action selector="stopButtonPressed:" destination="X2D-Vh-wij" eventType="touchUpInside" id="yLK-2h-ckv"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstItem="eOD-Mz-cbO" firstAttribute="width" secondItem="U9D-9N-IDZ" secondAttribute="width" multiplier="0.2" id="5wQ-XP-d7F"/>
+                                                    <constraint firstItem="eOD-Mz-cbO" firstAttribute="centerX" secondItem="U9D-9N-IDZ" secondAttribute="centerX" id="AFT-53-Yjw"/>
+                                                    <constraint firstItem="eOD-Mz-cbO" firstAttribute="centerY" secondItem="U9D-9N-IDZ" secondAttribute="centerY" id="Jso-O0-qJn"/>
+                                                </constraints>
+                                                <variation key="heightClass=compact">
+                                                    <mask key="constraints">
+                                                        <exclude reference="5wQ-XP-d7F"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="widthClass=compact">
+                                                    <mask key="constraints">
+                                                        <exclude reference="5wQ-XP-d7F"/>
+                                                    </mask>
+                                                </variation>
+                                            </view>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </stackView>
@@ -172,7 +320,7 @@
                                 <variation key="heightClass=compact-widthClass=compact" axis="horizontal"/>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="1J6-It-XKp" firstAttribute="top" secondItem="Bzw-IW-G0K" secondAttribute="bottom" id="QTf-Z0-Eiw"/>
                             <constraint firstItem="Bzw-IW-G0K" firstAttribute="top" secondItem="To5-v0-Imk" secondAttribute="bottom" id="VK9-GL-dD7"/>
