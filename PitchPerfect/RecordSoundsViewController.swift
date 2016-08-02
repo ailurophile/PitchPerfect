@@ -20,7 +20,7 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
  */
     @IBAction func recordAudio(sender: AnyObject) {
         print("record button pressed")
-        updateRecordingState(.Recording)
+        updateRecordingState(true)
         let dirPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory,.UserDomainMask, true)[0] as String
         let recordingName = "recordedVoice.wav"
         let pathArray = [dirPath, recordingName]
@@ -40,7 +40,7 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
 
     @IBAction func stopRecording(sender: AnyObject) {
         print("stop recording button pressed")
-        updateRecordingState(.NotRecording)
+        updateRecordingState(false)
         audioRecorder.stop()
         let audioSession = AVAudioSession.sharedInstance()
         try! audioSession.setActive(false)
@@ -49,20 +49,14 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     
     @IBOutlet weak var stopRecordingButton: UIButton!
     
-    enum RecordingState: Int { case Recording = 0, NotRecording }
     
-    func updateRecordingState(state: RecordingState){
-        switch state {
-        case .Recording:
-            recordingLabel.text = "Recording in Progress"
-            stopRecordingButton.enabled = true
-            recordButton.enabled = false
-        case .NotRecording:
-            recordingLabel.text = "Tap to record"
-            recordButton.enabled = true
-            stopRecordingButton.enabled = false
-            
-        }
+    
+    func updateRecordingState(isRecording: Bool){
+
+        recordingLabel.text = isRecording ? "Recording in Progress" : "Tap mic to Record"
+        stopRecordingButton.enabled = isRecording ? true : false
+        recordButton.enabled =  isRecording ? false : true
+        
     }
 
     func audioRecorderDidFinishRecording(recorder: AVAudioRecorder, successfully flag:  Bool){
@@ -77,11 +71,7 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     /*
      // MARK: - Navigation
      
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
+
      */
     override func viewDidLoad() {
         super.viewDidLoad()
