@@ -19,7 +19,7 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
  // MARK: - Recording
  */
     @IBAction func recordAudio(sender: AnyObject) {
-        print("record button pressed")
+
         updateRecordingState(true)
         let dirPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory,.UserDomainMask, true)[0] as String
         let recordingName = "recordedVoice.wav"
@@ -39,7 +39,7 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     }
 
     @IBAction func stopRecording(sender: AnyObject) {
-        print("stop recording button pressed")
+
         updateRecordingState(false)
         audioRecorder.stop()
         let audioSession = AVAudioSession.sharedInstance()
@@ -60,7 +60,7 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     }
 
     func audioRecorderDidFinishRecording(recorder: AVAudioRecorder, successfully flag:  Bool){
-        print("The audio has finished recording")
+ 
         if(flag){
             performSegueWithIdentifier("stopRecording", sender: audioRecorder.url)
         }

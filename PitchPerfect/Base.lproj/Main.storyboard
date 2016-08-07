@@ -370,7 +370,6 @@
                         <outlet property="snailButton" destination="YUa-e2-4gK" id="upT-1T-UPd"/>
                         <outlet property="stopButton" destination="eOD-Mz-cbO" id="E8T-dQ-a2H"/>
                         <outlet property="vaderButton" destination="20Y-QT-dwO" id="EM8-Ph-lSm"/>
-                        <outlet property="view" destination="YUa-e2-4gK" id="dVr-YQ-0vb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SVp-si-TTr" userLabel="First Responder" sceneMemberID="firstResponder"/>
