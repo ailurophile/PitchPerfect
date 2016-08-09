@@ -161,7 +161,7 @@
                                         <constraints>
                                             <constraint firstItem="cma-oa-uzF" firstAttribute="width" secondItem="YUa-e2-4gK" secondAttribute="width" id="glN-C0-iuE"/>
                                         </constraints>
-                                        <variation key="heightClass=compact-widthClass=compact" axis="vertical"/>
+                                        <variation key="heightClass=compact" axis="vertical"/>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="hC9-TI-fYB">
                                         <rect key="frame" x="0.0" y="134" width="560" height="134"/>
@@ -234,7 +234,7 @@
                                             </view>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <variation key="heightClass=compact-widthClass=compact" axis="vertical"/>
+                                        <variation key="heightClass=compact" axis="vertical"/>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="DqG-OK-eGb">
                                         <rect key="frame" x="0.0" y="268" width="560" height="134"/>
@@ -307,7 +307,7 @@
                                             </view>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <variation key="heightClass=compact-widthClass=compact" axis="vertical"/>
+                                        <variation key="heightClass=compact" axis="vertical"/>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="mRr-g0-d2w">
                                         <rect key="frame" x="0.0" y="402" width="560" height="134"/>
@@ -342,6 +342,7 @@
                                             </view>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <variation key="heightClass=compact" axis="vertical"/>
                                     </stackView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -351,7 +352,7 @@
                                     <constraint firstItem="20Y-QT-dwO" firstAttribute="width" secondItem="YUa-e2-4gK" secondAttribute="width" id="nnO-1z-8dW"/>
                                     <constraint firstItem="GYV-fP-DVB" firstAttribute="width" secondItem="YUa-e2-4gK" secondAttribute="width" id="pc2-Pm-C0U"/>
                                 </constraints>
-                                <variation key="heightClass=compact-widthClass=compact" axis="horizontal"/>
+                                <variation key="heightClass=compact" axis="horizontal"/>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
